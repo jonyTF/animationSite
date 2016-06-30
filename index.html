@@ -29,7 +29,9 @@
             }
             
             #presentation {
-                height: 15em;
+                max-height: 12em;
+                /*min-height: 15em;
+                height: 15em;*/
             }
             /*#more {
                 align-self: center;
@@ -114,7 +116,7 @@
 
         <div class="row">
             <div class="col-sm-6">
-                <img id="presentation" src="http://cdn1.alphr.com/sites/alphr/files/styles/16x9_540/public/2/43//pixar-renderman-monsters_university_mike.jpg?itok=g1Ef140y" alt="Kid Mike Wazowski Excited">
+                <img id="presentation" class="img-responsive" src="http://cdn1.alphr.com/sites/alphr/files/styles/16x9_540/public/2/43//pixar-renderman-monsters_university_mike.jpg?itok=g1Ef140y" alt="Kid Mike Wazowski Excited">
                 <br><button class="btn btn-lg" onclick="nextSlide()">Next</button>
             </div>
 
@@ -126,7 +128,7 @@
                     <tr id="planRow"><td>Planning</td><td>15-30%</td></tr>
                     <tr><td>Posing</td><td>30-40%</td></tr>
         			<tr><td>In-Betweening</td><td>15-40%</td></tr>
-        			<tr><td>Lighting/Shading and Camera Movement</td><td>5-15%</td></tr>
+        			<tr><td>Lighting/Shading/Camera</td><td>5-15%</td></tr>
                 </table>
             </div>
         </div>
@@ -137,19 +139,19 @@
             </div>
         </center>
         
-        <div class="row">
+        <!--<div class="row">
             <div class="col-sm-3">
                 <button class="btn btn-block" data-toggle="collapse" data-target="#planning" onclick="sectionText('planning')">Planning</button>
             </div>
             <div class="col-sm-3">
-        <button class="btn btn-block" onclick="document.getElementById('posing').innerHTML = sectionText('posing')">Posing</button>
+        <button class="btn btn-block" data-toggle="collapse" data-target="#posing" onclick="sectionText('posing')">Posing</button>
             </div>
                 
             <div class="col-sm-3">
-        <button class="btn btn-block" onclick="document.getElementById('in-betweening').innerHTML = sectionText('in-betweening')">In-Betweening</button>
+        <button class="btn btn-block" data-toggle="collapse" data-target="#in-betweening" onclick="sectionText('in-betweening')">In-Betweening</button>
             </div>
             <div class="col-sm-3">
-        <button class="btn btn-block" onclick="document.getElementById('lighting').innerHTML = sectionText('lighting')">Lighting/Shading and Camera Movement</button>
+        <button class="btn btn-block" data-toggle="collapse" data-target="#lighting" onclick="sectionText('lighting')">Lighting/Shading and Camera Movement</button>
             </div>
         </div>
         
@@ -161,21 +163,73 @@
         
         <div class="collapse" id="posing">
             <h3>Posing</h3>
-                <p>Now we move on to posing, where the bulk of the animation takes place. This is where all the main actions you want your characters to perform are blocked out. For 3D animation, this means positioning the bones of your model and keyframing them, and in 2D animation, this means drawing the main poses of your character for each scene.</p>-->
+                <p>Now we move on to posing, where the bulk of the animation takes place. This is where all the main actions you want your characters to perform are blocked out. For 3D animation, this means positioning the bones of your model and keyframing them, and in 2D animation, this means drawing the main poses of your character for each scene.</p>
         </div>
         
         <div class="collapse" id="in-betweening">
-        <!--<h3>In-Betweening</h3>
-            <p>In-betweening, sometimes referred to as "tweening," is a curious concept. In 2D animation, this may very well be the most time consuming part. First, you must figure out how the character moves from one pose to the next. Then, you must draw every single of those frames in that transition. While doing this, you must take into account the <a href="http://minyos.its.rmit.edu.au/aim/a_notes/anim_principles.html">Twelve Principles of Animation</a> conjured up by Walt Disney Studios, to make your animation as fluid and pleasing to the audience as possible. In 3D animation, on the other hand, the computer computes the frames in between for you. All you really need to do is to tweek and refine that tween to your liking, whether that be changing the ease of the motion, or adding more keyframes to further adjust the path of the tween, also taking into account the Twelve Principles of Animation.</p>-->
+        <h3>In-Betweening</h3>
+            <p>In-betweening, sometimes referred to as "tweening," is a curious concept. In 2D animation, this may very well be the most time consuming part. First, you must figure out how the character moves from one pose to the next. Then, you must draw every single of those frames in that transition. While doing this, you must take into account the <a href="http://minyos.its.rmit.edu.au/aim/a_notes/anim_principles.html">Twelve Principles of Animation</a> conjured up by Walt Disney Studios, to make your animation as fluid and pleasing to the audience as possible. In 3D animation, on the other hand, the computer computes the frames in between for you. All you really need to do is to tweek and refine that tween to your liking, whether that be changing the ease of the motion, or adding more keyframes to further adjust the path of the tween, also taking into account the Twelve Principles of Animation.</p>
         </div>
         
         <div class="collapse" id="lighting">
-        <!--<h3>Lighting/Shading and Camera Movement</h3>
-            <p>After all your animation has been finalized, it's finally time to make it more pleasing to the eye. By adding lights(3D animation) and shading(2D animation) and final camera movement(Both 2D and 3D animation) to your project, your can accomplish just that.</p>-->
-        </div>
+        <h3>Lighting/Shading and Camera Movement</h3>
+            <p>After all your animation has been finalized, it's finally time to make it more pleasing to the eye. By adding lights(3D animation) and shading(2D animation) and final camera movement(Both 2D and 3D animation) to your project, your can accomplish just that.</p>
+        </div>-->
 
-        <div id="certificate"><!--Your Name: <input type="text" id="nameTextBox">
-            <button onclick="document.getElementById('nameText').innerHTML = 'Congratulations, ' + nameTextBox.value + ', on completely reading the unofficial guide to animating by Jonathan Liu! You are now unofficially an 4N1M4T10N 3XP3RT!!!'">Submit</button>--></div>
+<div class="panel-group" id="accordion">
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      <h4 class="panel-title">
+        <a data-toggle="collapse" data-parent="#accordion" href="#collapse1" onclick="sectionText('planning')">
+        Planning</a>
+      </h4>
+    </div>
+    <div id="collapse1" class="panel-collapse collapse">
+      <div class="panel-body">
+                <p>Easily one of the most important steps of animating, planning your animation project is very crucial to the quality of the final outcome. Think of the planning process like the foundation for a building: if the foundation is weak, the building itself will be weak, no matter how sturdy and well-built the building is. Without a good purpose to your animation, you will have no sturdy basis for a good animation. No matter how polished your animation skills are, having a weak concept for your project can cripple it, since the resulting animation may not make sense and/or few viewers will enjoy it.</p>
+                <p>Take your time on this step, because it will decide how the rest of your animation will unfold. Rushing through this process or skipping it altogether can and will lead to frustration and roadblocks later on. Plans for professional animations go through countless revisions until the final draft is finalized.</p></div>
+    </div>
+  </div>
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      <h4 class="panel-title">
+        <a data-toggle="collapse" data-parent="#accordion" href="#collapse2" onclick="sectionText('posing')">
+        Posing</a>
+      </h4>
+    </div>
+    <div id="collapse2" class="panel-collapse collapse">
+      <div class="panel-body"><p>Now we move on to posing, where the bulk of the animation takes place. This is where all the main actions you want your characters to perform are blocked out. For 3D animation, this means positioning the bones of your model and keyframing them, and in 2D animation, this means drawing the main poses of your character for each scene.</p></div>
+    </div>
+  </div>
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      <h4 class="panel-title">
+        <a data-toggle="collapse" data-parent="#accordion" href="#collapse3" onclick="sectionText('in-betweening')">
+        In-Betweening</a>
+      </h4>
+    </div>
+    <div id="collapse3" class="panel-collapse collapse">
+      <div class="panel-body"><p>In-betweening, sometimes referred to as "tweening," is a curious concept. In 2D animation, this may very well be the most time consuming part. First, you must figure out how the character moves from one pose to the next. Then, you must draw every single of those frames in that transition. While doing this, you must take into account the <a href="http://minyos.its.rmit.edu.au/aim/a_notes/anim_principles.html">Twelve Principles of Animation</a> conjured up by Walt Disney Studios, to make your animation as fluid and pleasing to the audience as possible. In 3D animation, on the other hand, the computer computes the frames in between for you. All you really need to do is to tweek and refine that tween to your liking, whether that be changing the ease of the motion, or adding more keyframes to further adjust the path of the tween, also taking into account the Twelve Principles of Animation.</p></div>
+    </div>
+  </div>
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      <h4 class="panel-title">
+        <a data-toggle="collapse" data-parent="#accordion" href="#collapse4" onclick="sectionText('lighting')">
+        Lighting/Shading and Camera Movement</a>
+      </h4>
+    </div>
+    <div id="collapse4" class="panel-collapse collapse">
+      <div class="panel-body"><p>After all your animation has been finalized, it's finally time to make it more pleasing to the eye. By adding lights(3D animation) and shading(2D animation) and final camera movement(Both 2D and 3D animation) to your project, you can accomplish just that.</p></div>
+    </div>
+  </div>
+</div>
+
+
+        <div class="collapse" id="certificate">
+            Your Name: <input type="text" id="nameTextBox">
+            <button onclick="document.getElementById('nameText').innerHTML = 'Congratulations, ' + nameTextBox.value + ', on completely reading the unofficial guide to animating by Jonathan Liu! You are now unofficially an 4N1M4T10N 3XP3RT!!!'">Submit</button>
+        </div>
 
         <p id="nameText"></p>
 
@@ -193,27 +247,40 @@
             
             function sectionText(topic) {
                 if (topic == "planning") {
-                    planning=true;
+                    if (!planning) {
+                        planning=true;
+                    } else {
+                        planning=false;
+                    }
+                    
                 } else if (topic == "posing") {
-                    posing=true;
-                    text = ('<h3>Posing</h3><p>Now we move on to posing, where the bulk of the animation takes place. This is where all the main actions you want your characters to perform are blocked out. For 3D animation, this means positioning the bones of your model and keyframing them, and in 2D animation, this means drawing the main poses of your character for each scene.</p>');
+                    if (!posing) {
+                        posing=true;
+                    } else {
+                        posing=false;
+                    }
                 } else if (topic == "in-betweening") {
-                    inBetweening = true;
-                    text = ('<h3>In-Betweening</h3><p>In-betweening, sometimes referred to as "tweening," is a curious concept. In 2D animation, this may very well be the most time consuming part. First, you must figure out how the character moves from one pose to the next. Then, you must draw every single of those frames in that transition. While doing this, you must take into account the <a href="http://minyos.its.rmit.edu.au/aim/a_notes/anim_principles.html">Twelve Principles of Animation</a> conjured up by Walt Disney Studios, to make your animation as fluid and pleasing to the audience as possible. In 3D animation, on the other hand, the computer computes the frames in between for you. All you really need to do is to tweek and refine that tween to your liking, whether that be changing the ease of the motion, or adding more keyframes to further adjust the path of the tween, also taking into account the Twelve Principles of Animation.</p>');
+                    if (!inBetweening) {
+                        inBetweening=true;
+                    } else {
+                        inBetweening=false;
+                    }
                 } else if (topic == "lighting") { 
-                    lighting=true;
-                    //console.log(planning +" "+posing+" "+inBetweening+" "+lighting);
-                    text = ("<h3>Lighting/Shading and Camera Movement</h3><p>After all your animation has been finalized, it's finally time to make it more pleasing to the eye. By adding lights(3D animation) and shading(2D animation) and final camera movement(Both 2D and 3D animation) to your project, your can accomplish just that.</p>");
+                    if (!lighting) {
+                        lighting=true;
+                    } else {
+                        lighting=false;
+                    }
                 }
                 
                 checkForCertificate();
-                return text;
             }
                 
             function checkForCertificate() {
                 if(planning&&posing&&inBetweening&&lighting) {
                     console.log('show cert');
-                    document.getElementById("certificate").innerHTML = "Your Name: <input type=\"text\" id=\"nameTextBox\"><button class='btn btn-success' onclick=\"document.getElementById('nameText').innerHTML = 'Congratulations, ' + nameTextBox.value + ', on completely reading the unofficial guide to animating by Jonathan Liu! You are now unofficially an 4N1M4T10N 3XP3RT!!!'\">Submit</button>";
+                    $('#certificate').show();
+                    //document.getElementById("certificate").class= "collapse in";
                 }
             }
             
