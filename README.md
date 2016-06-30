@@ -1,2 +1,2 @@
 # animationSite
-xd
+A site I made at Foothill College
