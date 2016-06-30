@@ -139,7 +139,7 @@
         
         <div class="row">
             <div class="col-sm-3">
-                <button class="btn btn-block" data-toggle="collapse" data-target="#planning"<!--onclick="document.getElementById('planning').innerHTML = sectionText('planning')"-->>Planning</button>
+                <button class="btn btn-block" data-toggle="collapse" data-target="#planning" onclick="sectionText('planning')">Planning</button>
             </div>
             <div class="col-sm-3">
         <button class="btn btn-block" onclick="document.getElementById('posing').innerHTML = sectionText('posing')">Posing</button>
@@ -153,23 +153,23 @@
             </div>
         </div>
         
-        <div id="planning">
+        <div class="collapse" id="planning">
             <h3>Planning</h3>
                 <p>Easily one of the most important steps of animating, planning your animation project is very crucial to the quality of the final outcome. Think of the planning process like the foundation for a building: if the foundation is weak, the building itself will be weak, no matter how sturdy and well-built the building is. Without a good purpose to your animation, you will have no sturdy basis for a good animation. No matter how polished your animation skills are, having a weak concept for your project can cripple it, since the resulting animation may not make sense and/or few viewers will enjoy it.</p>
                 <p>Take your time on this step, because it will decide how the rest of your animation will unfold. Rushing through this process or skipping it altogether can and will lead to frustration and roadblocks later on. Plans for professional animations go through countless revisions until the final draft is finalized.</p>
         </div>
         
-        <div id="posing">
-            <!--<h3>Posing</h3>
+        <div class="collapse" id="posing">
+            <h3>Posing</h3>
                 <p>Now we move on to posing, where the bulk of the animation takes place. This is where all the main actions you want your characters to perform are blocked out. For 3D animation, this means positioning the bones of your model and keyframing them, and in 2D animation, this means drawing the main poses of your character for each scene.</p>-->
         </div>
         
-        <div id="in-betweening">
+        <div class="collapse" id="in-betweening">
         <!--<h3>In-Betweening</h3>
             <p>In-betweening, sometimes referred to as "tweening," is a curious concept. In 2D animation, this may very well be the most time consuming part. First, you must figure out how the character moves from one pose to the next. Then, you must draw every single of those frames in that transition. While doing this, you must take into account the <a href="http://minyos.its.rmit.edu.au/aim/a_notes/anim_principles.html">Twelve Principles of Animation</a> conjured up by Walt Disney Studios, to make your animation as fluid and pleasing to the audience as possible. In 3D animation, on the other hand, the computer computes the frames in between for you. All you really need to do is to tweek and refine that tween to your liking, whether that be changing the ease of the motion, or adding more keyframes to further adjust the path of the tween, also taking into account the Twelve Principles of Animation.</p>-->
         </div>
         
-        <div id="lighting">
+        <div class="collapse" id="lighting">
         <!--<h3>Lighting/Shading and Camera Movement</h3>
             <p>After all your animation has been finalized, it's finally time to make it more pleasing to the eye. By adding lights(3D animation) and shading(2D animation) and final camera movement(Both 2D and 3D animation) to your project, your can accomplish just that.</p>-->
         </div>
@@ -194,7 +194,6 @@
             function sectionText(topic) {
                 if (topic == "planning") {
                     planning=true;
-                    text = ('<h3>Planning</h3> <p>Easily one of the most important steps of animating, planning your animation project is very crucial to the quality of the final outcome. Think of the planning process like the foundation for a building: if the foundation is weak, the building itself will be weak, no matter how sturdy and well-built the building is. Without a good purpose to your animation, you will have no sturdy basis for a good animation. No matter how polished your animation skills are, having a weak concept for your project can cripple it, since the resulting animation may not make sense and/or few viewers will enjoy it.</p> <p>Take your time on this step, because it will decide how the rest of your animation will unfold. Rushing through this process or skipping it altogether can and will lead to frustration and roadblocks later on. Plans for professional animations go through countless revisions until the final draft is finalized.</p>');
                 } else if (topic == "posing") {
                     posing=true;
                     text = ('<h3>Posing</h3><p>Now we move on to posing, where the bulk of the animation takes place. This is where all the main actions you want your characters to perform are blocked out. For 3D animation, this means positioning the bones of your model and keyframing them, and in 2D animation, this means drawing the main poses of your character for each scene.</p>');
